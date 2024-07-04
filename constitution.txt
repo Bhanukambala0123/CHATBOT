@@ -1,0 +1,58 @@
+
+Rerate_Modal_Prem_Year2 is Year 2 total premium and Formatted as currency with 2 decimals.
+
+If Policy_Issue_State = 'Montana' AND Letter_Template = '2010' or
+blank AND Staggered_Year = '1' then Rerate_Modal_Prem_Year2 is populated. 
+
+If Policy_Issue State = 'Virginia' and Staggered Year = '1' or '2' then Rerate_Modal_Prem_Year2 is populated.
+
+If Policy_Issue_State = 'Vermont' and Letter_Template = '2016' and 
+Product_Code = 'LTC91', 'NHO91', 'LTC94', 'NHO94', 'LTC3', 'BSC3', 'GOL96', 'GOQ96', '2000-LTC', 'LTC2', 'BSC2' or 'LTC3R' 
+then populate with Rerate_Modal_Prem_Year2 is populated in first and second year staggered implementations.
+
+If Policy Issue State 'Vermont' and Letter_Template = '2016' 
+and Product Code = '4062-INT', '4063-INT', '6062-INT', '6063-INT',' 7062/7063', 
+then populate with Rerate_Modal_Prem_Year2 is populated in first and second year staggered implementations. 
+
+If Policy Issue State = 'California' and Letter_Template = '2019' and Product_Code 'LTC2' or 'CA06' 
+then populate with Rerate_Modal_Prem_Year2 is populated in first and second year staggered implementations. 
+
+If Policy Issue State 'California' and Letter_Template = '2016' 
+and Product_Code 'LTCQ', 'GOL96', 'GOQ96', 'SCQ96', 'SCN96', 'GON96', 'GOT96', 'GNF96' or 'GOF96' 
+then populate with Rerate_Modal_Prem_Year2 is populated in first and second year staggered implementations.
+
+If Policy Issue State = 'California and Letter Template = '2016' 
+and Product_Code LICQ, GOLY6, GOQ90, SUQ96, SCN96, GONY6, 'GOT96', 'GNF96' or 'GOF96' 
+then populate with Rerate_Modal_Prem_Year2 is populated in first and second year staggered implementations.
+
+If Policy_Issue_State = 'California' and Letter_Template = '2016' 
+and Product_Code = 'LTC91', 'NHO91' or 'LTC94' and inflation is not a None/No Inflation/GPO/CPI 
+then populate with Rerate_Modal_Prem_Year2 is populated in first and second year staggered implementations. 
+
+If Policy_Issue_State = 'California' and Letter Template = '2016' 
+and Product Code = 'LTC91', 'NHO91' or 'LTC94' and inflation is None/No Inflation/GPO/CPI and Benefit Period is 'Lifetime' 
+then populate with Rerate_Modal_Prem_Year2 is populated in first and second year staggered implementations. 
+
+If Policy_Issue_State = 'California' and Letter_Template = '2016' 
+and Product_Code = '4060-NHM', '4062-INT", '4063-INT', '4072-INT', '4073- INT', '6062-INT', '6063-INT', '6072-INT' or '6073-INT"
+then populate with Rerate_Modal_Prem_Year2 is populated in first and second year staggered implementations. 
+
+Next Anniversary_RLMB - currency with 2 decimals if applicable. Exclude decimals if .00. 
+Next Anniversary_RLMB is the Remaining Lifetime Benefit amount as of the next policy anniversary and will be illustrated for policies whose sub_letter_template is populated with 'SC' or 'SC2016' or 'SC2019'
+whenever possible.
+Next Anniversary_RLMB should be populated with non-numerical value of 'Unlimited' for policies with benefit period as 'Lifetime'.
+For policies with shared care benefit amount that has been transferred out(sent out) for active transfers should have Next Anniversary_RLMB populated.
+The policyholder's current RLMB will be used for policies with CPI COMP (ADD GIO) inflation as the CPI factor to project the RLMB at next anniversary is not available when the extract is created. 
+For policies with both 'Nursing Home' and 'Home Health Care' pools of benefits, the 'Nursing Home' pool amount for RLMB should be illustrated.I
+For policies with 91-94 plan codes (LTC91, LTC94, LNY91 and LNY94 product codes), Next Anniversary_RLMB will be populated with spaces for policies with inflations - SIMPLE, COMPOUND, SIMPLE NOT INFLATING and COMP NOT INFLATING.
+Next Anniversary_RLMB will be populated with spaces if 'Nursing Home' pool amount for RLMB is zero or negative.
+For policies with shared care benefit amount that has been transferred in(received) as part of deceased transfer or active transfer will have Next Anniversary_RLMB populated with spaces.
+For policies in 'Recovered' or 'Recovered ROB' claim status, Next Anniversary_RLMB should be populated with spaces.
+For policies in 'On Claim' claim status, Next Anniversary_RLMB should be populated with spaces if Benefits_Paid has a non-zero dollar amount.
+
+Rerate_RLMB_for_DMB - Formatted as currency with 2 decimals if applicable. Exclude decimals if .00. 
+Rerate_RLMB_for_DMB is GPO Personalized Option Remaining Lifetime Benefit Amount for daily/monthly benefit amount reduction and will be illustrated for policies whose sub_letter_template is populated with 'SC' or 'SC2016' or 'SC2019' whenever possible.
+Rerate_RLMB_for_DMB should be populated with spaces if PODA does not return a decrease in Daily/Monthly benefit option.
+Rerate_RLMB_for_DMB should be populated with spaces if Next_Anniversary_RLMB is populated with spaces.
+Rerate_RLMB_for_DMB should be populated with non-numerical value of 'Unlimited' for policies with benefit period as 'Lifetime'
+For policies with both 'Nursing Home' and 'Home Health Care' pools of benefits, the 'Nursing Home' pool amount for RLMB should be illustrated in Rerate_RLMB_for_DMB.
