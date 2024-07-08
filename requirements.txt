@@ -1,4 +1,5 @@
 ﻿ai21==2.8.0
+pysqlite3-binary
 ai21-tokenizer==0.11.2
 build==1.2.1
 chroma-hnswlib==0.7.3
