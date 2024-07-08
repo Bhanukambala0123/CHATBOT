@@ -1,3 +1,120 @@
+Rerate is referred to as increasing the premium amount policy holders are paying for the policies.John Hancock providing same premium 
+for year after year result into some depreciation. To overcome this economic crisis, the company decided to change the premium scheme. 
+This change in premium is what we call Rerate.Before 2008, there was no concept of rerate. The policy holder had to pay what premium 
+was decided at the time of purchase. After the inflation in the market, when John Hancock was going in losses, it decided to increase 
+the premium amount over certain years to overcome these losses. In 2008, rerate was introduced and there was flat increase in percentage. For all the John Hancock
+policies, the increase in percentage was 13% and for all the Fortis policies, the increase was 18%. After the success of 2008 rerate, 
+rerate was done in 2010 and then in 2013, 2016, 2019 and 2022.
+
+What if the rerate is denied by the policy holder?
+Here introduced the concept of Landing Spot. Only the users who are having ABI Policies (Simple and Compound) are offered Landing Spot.
+ Non-ABI policy holders, if deny rerate loses some benefits decided by the company.
+
+PSC stands for Product State Combination.
+PSCs are the combination of products and states which are provided to us in Anne Maki Sheet for those policies which needs rerate in 
+particular anniversary month. When any new rerate and new requirements need to be added, they are provided by PSCs in Anne Maki Sheet. 
+The PSCs for those policies which have been rerated in previous years and some rerate is still pending are also included.
+
+Anne Maki Sheet - In this sheet, new PSCs are mentioned which needs rerate and these PSCs are added to the existing PSC's list.
+Also the second year capped PSCs and other business requirements are mentioned in this sheet.
+
+What is Landing Spot?
+Term used to describe the benefit change which will allow eligible ABI policyholders to maintain their pre-rerate premium by reducing 
+their inflation percentage. The Landing Spot percentage is determined by the actuaries and is only available to a policyholder during 
+the rerate election period.ABI Policy holders are offered landing spot, which means they have the option of accepting or denying the 
+rerate. What landing spot means is, if the policy holder denies the rerate, his offered benefits will be reduced. Suppose he accepts the
+landing spot, then, if his benefits were supposed to be increased by 5% after accepting rerate, now his benefits will be increased 
+by say 3% only.
+
+Layered Landing Spot - Term used to describe instance where policyholder previously accepted a Landing Spot as part of the 2010/2013 
+rate increase, then is offered a second Landing Spot for the 2013 rate increase. If policyholder is eligible for a 2016 Landing Spot, 
+Landing Spot inflation percentage offered will vary depending on policyholder elections for prior rerate. Lower inflation percentages 
+will be calculated for policyholders who previously accepted the 2010 Landing Spot; higher inflation percentages will be calculated for 
+policyholders who previously accepted the rate increase.
+
+Types of Policies: Basically, there are three types of policies offered:
+1) Full Acceptance: Rerate is done once and for all and the same amount has to be paid by the policy holder every year. 
+For example, the policy holder was paying a premium of $100 and after rerate, he was supposed to pay 20% more of the current premium. 
+So after rerate, he will pay $120 every year.
+2) Staggered: Rerate is done dividing the rerate percentage in different years and the rerate percentage for every year is provided in 
+the very beginning when the rerate is done. For example, the policy holder was paying a premium of $100 and his premium is rerated by 
+50%. Now, this increase in percentage is divided in years, which means in the first year after rerate, he will pay, say 20% more of 
+the current premium, l.e. $120. In the second year, he will pay, say 20% more of the current premium, je, $140. And in the third year, 
+he will pay, say 10% more, Le, $150. And thus the policy is called as 3-year-staggered- policy.
+3) Capped: Term used for instances where a state which does not approve the rate increase fully as flled, 
+capping the rate increase percentage which can be applied in a. given year. This is also referred to as an open ended or partial 
+approval. It is same as staggered policy. The only difference is that the rerate percentage is provided yearly. Only the rerate 
+percentage of first year is provided when the rerate is done. For example, the policy holder was paying a premium of $100 and his
+ policy is rerated. Now, he was notified only about the increase in percentage for first year, say 30% and he will pay $130 in the 
+ first year, then in the second year only he will be notified about the second premium, say 10% more of the current premium, l.e., 
+ $140, and similarly in the third year, he will be notified the increase in percentage for third year, say 10%, l.e., $150.
+4) Capped Staggered: It is combination of Capped and staggered. Every capped phase is staggered.
+
+Some of the important Reference tables are listed below:
+1) RR2010 REF PH MAILING (Includes the details of policy including PH Mailing Date)
+2) RR2010_REF_PRODUCER_MAILING (Includes Producer mailing date)
+3) RR2010 REF PRODUCTS (Includes product details like Product code & Product group)
+4) RR2010 REF PRODUCTS_EXCEPTION (For any exceptional condition related to product)
+5) RR2010_REF_LANDING_SPOT (Includes the details of landing spot, as Landing spot pct)
+6) RR2010_REF_LANDING_SPOT_EXCEPTION (Exceptional condition related to landing spot)
+7) RR2010_REF_RERATE_FACTORS (Includes rerate factor and other details)
+8) RR2010_REF_CNF_RERATE_FACTORS (For staggered policies to know the actual rerate)
+9) RR2010_REF_CAP_STAG (To get whether the policy is cap stag or not)
+Cap stag means the policy is staggered in every capped phase. Acronym used for instances where a state does not approve the rate
+increase fully as filed, capping the rate increase percentage that can be applied and also requires that the approved percentage be 
+implemented over multiple years similar to a staggered state. This is a hybrid of a traditional Capped and  Staggered approval.
+
+RR2020_REF_PH_MAILING - This table includes all the basic information about the policies, including ISSUE_STATE, PRODUCT_CODE, 
+PH_MAILING_DATE, ROUND, WAVE, ANNV_START_DATE, ANNV_STOP_DATE, PROCESSED FLG and RR YEAR.
+PH_MAILING_DATE is the expected date on which the policy holder would be notified (4 months prior to the anniversary month) about the 
+rerate.
+ANNV START DATE is the first date of the anniversary month and ANNV_STOP_DATE is the last date of the anniversary month. 
+Rerate is activated in the anniversary month only. If the policy is on claim on anniversary month of the rerate year, it will be 
+rerated next year on the anniversary month only.
+PROCESSED_FLG is the field which indicates the status of the processing of policies. It may be NULL, P, R, For D.
+NULL represents those policies which needs to be processed at present.
+P represents those policies which have been processed.
+R represents those policies which have been processed & having the anniversary month.
+F represents those policies which needs to be processed in future years.
+D represents those policies which have no existence & are considered as deleted.
+
+RR2010_REF_PRODUCER_MAILING - This table includes PRODUCER_MAILING_ID, PRODUCER MAILING DATE & DATA_AS_OF_DATE. PRODUCER_MAILING_DATE 
+is the expected date when the rerate is notified to the producer and is 1 month prior to the PH_MAILING_DATE.
+
+RR2010_REF_PRODUCTS - It includes the details of the product, like PRODUCT CODE, PRODUCT DESCRIPTION and PRODUCT_GROUP. PRODUCT_GROUP
+ defines which group does the product belongs to.
+
+RR2010_REF_PRODUCTS_EXCEPTION - It includes the products which have some exceptional conditions related to product group. For example, 
+issue state Wisconsin has same products for different scenarios. In such cases, REF_PRODUCT_EXCEPTION is maintained.
+
+RR2010_REF_LANDING_SPOT - It includes the details of landing spot including Landing Spot Percentage with rerate decision.
+
+RR2010_REF_LANDING_SPOT_EXCEPTION - It includes the products which have some exceptional conditions related to landing spot. 
+It Includes APPLICATION_START_DATE and APPLICATION_STOP_DATE as well for advantage products(if provided).
+
+How mailing extract (RR2010_MAILING_EXTRACT table) is generated?
+Mailing extract is generated by executing following SSIS packages respectively:
+1) LPRO_RR2010_Data_Transfer.dtsx
+2) LPRO_2010_WorkBasicCriteria.dtsx
+3)LPRO_2010_Pre_MIHQ.dtsx
+4) LPRO_2010_MIHQ.dtsx
+5) LPRO_2010_Post_MIHQ.dtsx
+6)LPRO_2010_ExtractProcess.dtsx
+
+RR2010_MAILING_EXTRACT_HISTORY - This table maintains all the policies and PSCs details which have been fixed and whose POLICY_STATUS
+ is 'A', I.e., Active in RR2010_MAILING_EXTRACT table.
+
+RR2010 MAILING_EXTRACT_HISTORY_TERM - This table maintains all the policies and PSCs details which have been fixed and whose 
+POLICY_STATUS is 'A-Suspended or T, le., Active Suspended or Terminated in RR2010 MAILING EXTRACT table.
+
+PODA stands for Personalized Option Decision Algorithm. PODA algorithm is the calculation and processing supporting reductions in 
+Dally Maximum Benefit (DMB) and Benefit Period (BP), or a combination of the two, with the goal to get the policyholder as close to 
+premium neutral (pre-rate Increase premium) as possible. PODA is offered to only those policies which are not offered landing spot and 
+which are not permanently locked. But for terminated policies, it will run even if it is permanently locked.
+PODA reduces the rerate modal premium nearly equal to current modal premium by reducing some benefits.
+PODA 1: The daily monthly benefit is reduced.
+PODA 2: The benefit period is reduced.
+PODA 3: Both the daily monthly benefit as well as benefit period is reduced.
 
 Rerate_Modal_Prem_Year2 is Year 2 total premium and Formatted as currency with 2 decimals.
 
@@ -56,3 +173,115 @@ Rerate_RLMB_for_DMB should be populated with spaces if PODA does not return a de
 Rerate_RLMB_for_DMB should be populated with spaces if Next_Anniversary_RLMB is populated with spaces.
 Rerate_RLMB_for_DMB should be populated with non-numerical value of 'Unlimited' for policies with benefit period as 'Lifetime'
 For policies with both 'Nursing Home' and 'Home Health Care' pools of benefits, the 'Nursing Home' pool amount for RLMB should be illustrated in Rerate_RLMB_for_DMB.
+
+2022 Rate Increase Details:
+In 2022, John Hancock completed another comprehensive claims study for long-term care insurance, which we generally conduct every three 
+years, and which examines the usage trends for an insured population. Relative to previous expectations, the new data demonstrates 
+lower mortality for non-claimants, higher utilization of benefits, and longer claims, partly offset by lower claim incidence.
+Based on that data, we have determined that there is a need to increase premiums on certain policy series. Current scope includes 
+policyholders in active and on waiver status for Retail and Fortis products which have gone through the rerate process atleast once 
+in the prior rerates 2010 rerate, 2013 rerate, 2016 rerate and 2019 rerate. There are no JH products that are to be rerated for the 
+first time with the Implementation of the 2022 rate increase.
+The 2022RR Inflation Landing Spot will not be available to policyholders with the following inflation types as for 2019RR:
+1) CPI COMPR (ADD GIO)?
+2) CPI CMP75 (ADD GIO)?
+3) BEN BUILDER (BUY UP)?
+4) AUTOMATIC CPI
+5) CPI COMPOUND CORPSOL
+The Inflation Landing Spot will not be offered to Limited Pay policies for 2022RR implementations as in 2019RR.
+
+SHARED COST PRICING FACTOR is Populated with 1 minus Shared Cost Factor provided in the 2022 rerate approval pricing rate sheet. 
+It is formatted as a number formatted to 3 decimal places. If the pricing factor in 99, it is populated as 99. If shared cost is 
+not an option, it is blank.
+
+SHARED COST 80 PCT DMB FACTOR is populated with 80% (one minus the PODA DMB over the Current DMB) when Shared Cost Landing Spot is an 
+option and DMB reduction has been achieved. It is formatted as a number formatted to 3 decimal places. If shared cost is not an option, 
+it is blank. If shared cost is an option but no PODA DMB reduction is achieved for the policyholder, it is blank.
+
+FINAL SHARED_COST_FACTOR is populated with 1 minus minimum of SHARED COST_PRICING_FACTOR and SHARED COST 80 PCT DMB_FACTOR when
+SHARED COST PRICING FACTOR is not equal to 99 and SHARED COST 80 PCT DMB FACTOR is not equal to blank.It is formatted as a 
+number with 3 decimal places. If the SHARED COST PRICING FACTOR equals 99, it is blank. If shared cost is not an option, it is blank.
+It is also blank for 2016 rerate implementation for policies having no inflation of JH products LTC91, NHO91, LTC94, NHO94, GOF96, 
+GOQ96, 2000-LTC, LTC2, BSC2 in Maryland. If SHARED COST 80 PCT DMB FACTOR is blank and SHARED COST PRICING FACTOR is not equal to
+99 then FINAL SHARED_COST_FACTOR is equal to SHARED COST PRICING FACTOR.
+
+SHARED COST DMB: If there was no shared cost election in prior rerates, then SHARED COST DMB is populated with the policyholder's 
+Shared Cost DMB amount by applying the FINAL_SHARED_COST_FACTOR to the policyholder's next policy anniversary DMB for each impacted 
+benefit sequence, and then the results are summed together and finally rounded to the nearest cent. 
+It will be blank, if Shared Cost option is not applicable.
+
+SHARED_COST_PH_PCT is populated with the policyholder's Shared Cost percentage (1 minus FINAL SHARED_COST_FACTOR) from current rerate
+(2022 rerate). It is formatted as a percent with one decimal place. The field denotes the policyholder shared cost percentage for current 
+rerate Implementation. The field does not denote the cumulative policyholder Shared Cost percentage for multiple shared cost elections.
+It is populated with blank if FINAL SHARED_COST_FACTOR is blank.
+
+SHARED COST JH PCT is populated with John Hancock's Shared Cost Percentage from current rerate which is equivalent to the 
+FINAL_SHARED_COST_FACTOR formatted as a percent with one decimal place. It denotes the John Hancock's shared cost percentage for 
+current rerate implementation. It does not denote the cumulative John Hancock's Shared Cost percentage for multiple shared cost 
+elections. It is populated with blank if FINAL SHARED_COST_FACTOR is blank.
+
+SHARED COST_HHC DMB represents the non-facility (HHC) benefits. If there was no shared cost election in prior rerates, 
+SHARED COST_HHC DMB is populated with the policyholder's Shared Cost HHC DMB amount by applying the FINAL_SHARED_COST_FACTOR to the 
+policyholder's next policy anniversary DMB for each impacted benefit sequence, and then the results are summed together and finally 
+rounded to the nearest cent. If there was shared cost election in prior rerates, SHARED COST_HHC DMB is populated with policyholder's 
+Shared Cost HHC DMB amount by applying the CUMULATIVE SHARED_COST_FACTOR to the policyholders next policy anniversary DMB excluding the 
+prior (2016 or 2019 rerate) shared cost factor, for each Impacted benefit sequence, and then the results are summed together and finally 
+rounded to the nearest cent. In this condition, Shared Cost HHC DMB amount will be extracted from LifePRO API functionality when PODA 
+processing is feasible for the concerned policy. It is blank if Shared Cost option is not applicable. 
+
+PRIOR_SHARED_COST_FACTOR is populated with the John Hancock Shared cost factor from prior rerate (2016 or 2019 rerate) if the policy 
+elected shared cost once in prior rerate.It is populated with the cumulative John Hancock shared cost factor if the policy elected 
+shared cost twice in prior rerates. It is formatted as a number with 3 decimal places. It will only be populated when there has been a 
+shared cost election in prior rerates. It will be populated with blank if there was no prior (2016) rerate shared cost election.
+
+PRIOR_SHARED_COST_PH_PCT is populated with the policyholder's overall Shared Cost percentage (1 minus PRIOR SHARED_COST_FACTOR) for a 
+policy that elected shared cost in prior (2016 and/or 2019) rerates. It is formatted as a percent with one decimal place. It will be 
+populated with blank if there was no prior (2016 and/or 2019) rerate shared cost election.
+
+CUMULATIVE SHARED COST FACTOR is populated with the overall shared cost factor applicable on the policy that has already elected shared 
+cost in prior (2016 or 2019) rerates and if the policyholder elects shared cost option in the current (2022) rerate implementation.
+It is formatted as a number with 3 decimal places. It will be populated with blank if there was no prior (2016 or 2019) rerate shared 
+cost election. It will be populated with blank when FINAL SHARED COST FACTOR is blank. It will be blank if Shared Cost option is not 
+applicable.
+
+CUMULATIVE SHARED COST PH PCT is populated with the policyholder's overall Shared Cost percentage ( 1 minus CUMULATIVE SHARED COST 
+FACTOR) for a policy that elected shared cost in prior (2016 or 2019) rerates. It is formatted as a percent with one decimal place. 
+It will be populated with blank if there was no prior (2016 or 2019) rerate shared cost election.It will be populated d with blank 
+if CUMULATIVES SHARED COST FACTOR is blank. It will be blank if Shared Cost option is not applicable. 
+
+CUMULATIVE SHARED COST JH PCT is populated with John Hancock's overall Shared Cost Percentage which is equivalent to the CUMULATIVE 
+SHARED COST FACTOR for a policy that elected shared cost in prior (2016 or 2019) rerates. It is formatted as a percent with one decimal 
+place.It will be populated with blank if there was no prior (2016 ог 2019) rerate shared cost election. It will be populated with blank 
+if CUMULATIVE_SHARED_COST_FACTOR is blank. It will be blank if Shared Cost option is not applicable.
+
+POLICY BUY OUT ELIG: 
+Set to 'Eligible to Exercise' if the policy is present in the buyout ratesheet provided for the corresponding state product group and 
+the applicable rerate implementation is eligible for buyout.
+Set to 'Eligible to Exercise' for staggered year=1 if the rerate Implementation is staggered and if the policy is present in the buyout 
+ratesheet provided for the corresponding state product group and the applicable rerate Implementation is eligible for buyout.
+Set to 'Not Eligible to Exercise' for staggered year=2 or more if the rerate implementation is staggered and if the policy is present 
+in the buyout ratesheet provided for the corresponding state product group and the applicable rerate Implementation is eligible for buyout.
+Set to 'Not Eligible to Exercise' if the policy is not present In the buyout ratesheet provided for the corresponding state product 
+group, but the applicable rerate Implementation is eligible for buyout. 
+Set to 'N/A' for all rerate implementations which are not applicable for buyout.
+
+POLICY BUY OUT AMT:
+Populate with the buyout amount provided in the ratesheet for the applicable policy of the concerned state product group if the 
+POLICY BUY OUT ELIG is set to "Eligible to Exercise' and NXT_POLICY ANNIV DATE lies between the effective date and end date of the 
+offer provided in the buyout ratesheet.
+If the POLICY_BUY_OUT_ELIG is set to 'Eligible to Exercise' and NXT_POLICY_ANNIV_DATE doesnot lie between the effective date and end 
+date of the offer provided in the buyout ratesheet, do not populate the buyout amount.
+If the buyout amount is space, zero or 'TBD' in buyout ratesheet with POLICY_BUY_OUT_ELIG set to 'Eligible to Exercise', do not populate
+the buyout amount.
+If 'POLICY_BUY_OUT_ELIG' is set to 'Not Eligible to Exercise' or 'N/A', do not populate the buyout amount.
+
+For a policy on schedule without any rerate deferrals due to reasons including claim status, the NXT_POLICY_ANNIV_DATE of the eligible
+rerate implementation with the offer buyout will always lie between the effective date and end date of the offer provided in the buyout 
+ratesheet. For a policy which is a recovered claimant or whose rerate is deferred, the NXT_POLICY_ANNIV_DATE of the eligible rerate 
+implementation with the offer buyout may or may not lie between the effective date and end date of the offer provided in the buyout 
+ratesheet based on if revised buyout rates are received from actuaries.Post Monthly Extract generation (on 20th of every month) a 
+list of the policies from the extract generated which are not 'On Claim' or 'SWOP' and have POLICY_BUY_OUT_ELIG set to 
+'Eligible to Exercise' but POLICY_BUY_OUT_AMT set to blanks will be sent to actuarial team. Buyout ratesheets will be due on round 
+locking, any updates to the existing ratesheets will also be due along with round locking with a communication from actuarial team 
+mentioning the state product group and rerate implementations which have been updated for the policies that needed update.
+
